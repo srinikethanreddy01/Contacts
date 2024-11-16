@@ -11,7 +11,7 @@ function Navbar() {
 
       <div className='nav-link'>
         <Link to={'/'} style={{color:'white '}}>create</Link>
-        <Link to={'/details'} style={{color:'white'}}>view</Link>
+        <Link to={'/details'} style={{color:'white'}}>View Contacts</Link>
       </div>
     </div>
   )
