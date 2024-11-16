@@ -27,7 +27,7 @@ const Form = () => {
         console.log("hello")
 
         try{
-            const res=await axios.post('http://localhost:5000/contacts',Contacts);
+            const res=await axios.post('https://contacts-backend-563p.onrender.com/contacts',Contacts);
 
             alert("Contact Details added successfully")
             console.log(res);
