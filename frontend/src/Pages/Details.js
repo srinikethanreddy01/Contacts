@@ -38,7 +38,7 @@ const Details = () => {
 
     const fetchData = async () => {
         try {
-            const res = await axios.get('http://localhost:5000/contacts');
+            const res = await axios.get('https://contacts-backend-563p.onrender.com/contacts');
             setContacts(res.data);
         } catch (err) {
             console.log(err);
@@ -80,7 +80,7 @@ const Details = () => {
     const handleDelete = async (id) => {
         try {
             console.log("hello")
-            const res = await axios.delete(`http://localhost:5000/contacts/${id}`);
+            const res = await axios.delete(`https://contacts-backend-563p.onrender.com/contacts/${id}`);
             setContacts((prevContacts) => prevContacts.filter((contact) => contact._id !== id));
             console.log(res);
         } catch (err) {
@@ -100,7 +100,7 @@ const Details = () => {
 
     const handleUpdate = async () => {
         try {
-            const res = await axios.put(`http://localhost:5000/contacts/${currentContact._id}`, updatedContact);
+            const res = await axios.put(`https://contacts-backend-563p.onrender.com/contacts/${currentContact._id}`, updatedContact);
             fetchData()
             setOpen(false);
             alert("Data updated Successfully")
